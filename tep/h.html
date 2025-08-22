@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSky</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="c.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">
+            <h1><i class="fas fa-book-open"></i> BookSky</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search books...">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+
+    <div class="container" id="book-list">
+        <div class="empty-state" id="empty-state">
+            <i class="fas fa-book-reader"></i>
+            <h2>Your library is empty</h2>
+            <p>Add your first book to get started</p>
+        </div>
+    </div>
+
+    <!-- Popup for Adding a Book -->
+    <div class="popup-box" id="popup-box">
+        <div class="popup-header">
+            <h2>Add New Book</h2>
+            <button class="close-popup" id="close-popup"><i class="fas fa-times"></i></button>
+        </div>
+        <form id="book-form">
+            <div class="input-group">
+                <label for="book-title-input">Book Title</label>
+                <input type="text" id="book-title-input" placeholder="Enter book title" required>
+            </div>
+            <div class="input-group">
+                <label for="book-author-input">Author</label>
+                <input type="text" id="book-author-input" placeholder="Enter author name" required>
+            </div>
+            <div class="input-group">
+                <label for="book-description-input">Description</label>
+                <textarea id="book-description-input" placeholder="Enter a short description" required></textarea>
+            </div>
+            <div class="form-buttons">
+                <button type="button" id="cancel-button">CANCEL</button>
+                <button type="submit">ADD BOOK</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <button class="add-button" id="add-popup-button">
+        <i class="fas fa-plus"></i>
+    </button>
+
+    <script src="j.js"></script>
+</body>
+</html>
